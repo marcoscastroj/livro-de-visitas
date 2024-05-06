@@ -1,0 +1,29 @@
+{
+    "frequency": {
+      "categories": ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+      "data": [30, 40, 35, 50, 49, 60]
+    },
+    "country": {
+      "categories": ["EUA", "Brasil", "China", "Índia", "Rússia"],
+      "data": [55, 30, 15, 20, 25]
+    },
+    "brazil": {
+      "categories": ["SP", "RJ", "MG", "BA", "RS"],
+      "data": [30, 25, 20, 15, 10]
+    },
+    "satisfaction": {
+      "categories": ["Excelente", "Bom", "Regular", "Ruim"],
+      "data": [50, 30, 15, 5]
+    },
+    "stats": {
+      "totalVisits": 10000,
+      "conversionRate": "5%",
+      "avgTimeOnSite": "3 min",
+      "satisfactionRate": "80%"
+    },
+    "touristSpots": {
+      "categories": ["Lajedo Pai Mateus", "Igreja Auto da Compadecida", "Arraial", "Museu"],
+      "data": [100, 80, 70, 60]
+    }
+  }
+  
