@@ -1,7 +1,6 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 
-// Dados simulados em formato JSON
 import data from './data.json';
 
 function Navbar() {
@@ -12,7 +11,6 @@ function Navbar() {
   );
 }
 
-// Componente para os cards de estatísticas gerais e indicadores de satisfação
 function DashboardCard({ title, value }) {
   return (
     <div style={{ border: '1px solid #ddd', borderRadius: '5px', padding: '1rem', margin: '1rem', minWidth: '200px' }}>
@@ -23,7 +21,6 @@ function DashboardCard({ title, value }) {
 }
 
 function App() {
-  // Dados para os gráficos
   const frequencyData = {
     options: {
       chart: {
@@ -103,23 +100,24 @@ function App() {
     <div>
       <Navbar />
       <div style={{ padding: '1rem' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          <DashboardCard title="Total de Visitas" value={data.stats.totalVisits} />
+          <DashboardCard title="Tempo Médio de Permanência" value={data.stats.avgTimeOnSite} />
+          <DashboardCard title="Taxa de Satisfação" value={data.stats.satisfactionRate} />
+        </div>
+
         <h2>Gráfico de Frequência de Visitas</h2>
         <Chart options={frequencyData.options} series={frequencyData.series} type="line" height={350} />
 
         <h2>Gráfico de Visitantes por País de Origem</h2>
         <Chart options={countryData.options} series={countryData.series} type="bar" height={350} />
 
-        <h2>Gráfico de Distribuição de Brasileiros por Estado</h2>
+        <h2>Gráfico de Distribuição de Visitantes por Estado</h2>
         <Chart options={brazilData.options} series={brazilData.series} type="bar" height={350} />
 
         <h2>Gráfico de Pontos Turísticos mais Visitados em Cabaceiras</h2>
         <Chart options={touristSpotData.options} series={touristSpotData.series} type="bar" height={350} />
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap' }}>
-          <DashboardCard title="Total de Visitas" value={data.stats.totalVisits} />
-          <DashboardCard title="Tempo Médio de Permanência" value={data.stats.avgTimeOnSite} />
-          <DashboardCard title="Taxa de Satisfação" value={data.stats.satisfactionRate} />
-        </div>
       </div>
     </div>
   );
