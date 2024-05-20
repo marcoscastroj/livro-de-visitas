@@ -1,12 +1,19 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
 
+
 import data from './data.json';
 
 function Navbar() {
   return (
-    <nav style={{ backgroundColor: 'gray', padding: '1rem' }}>
-      <div style={{ color: 'white', fontWeight: 'bold' }}>Dashboard</div>
+    <nav style={{ backgroundColor: 'gray', padding: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: "#0f172a" }}>
+      <h3 style={{ fontSize: '1.5rem', margin: '0', color: 'white', fontWeight: 'bold' }}>Livro de visitas</h3>
+      <ul style={{ display: 'flex', listStyle: 'none', gap: "30px", margin: '0', cursor: 'pointer', color: 'white' }}>
+        <li><a href="#" style={{ textDecoration: 'none', color: 'white'}}>Dashboard</a></li>
+        <li><a href="#" style={{ textDecoration: 'none', color: 'white' }}>Gerenciamento de usuários</a></li>
+        <li><a href="#" style={{ textDecoration: 'none', color: 'white' }}>Gerenciamento de perfis</a></li>
+        <li><a href="#" style={{ textDecoration: 'none', color: 'white' }}>Logout</a></li>
+      </ul>
     </nav>
   );
 }
